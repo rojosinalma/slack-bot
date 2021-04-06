@@ -1,0 +1,15 @@
+---
+default: &default
+  slack_web_token:         <%= ENV['SLACK_WEB_TOKEN']                         %>
+  slack_api_token:         <%= ENV['SLACK_API_TOKEN']                         %>
+  slack_signing_secret:    <%= ENV['SLACK_SIGNING_SECRET']                    %>
+  slack_ruby_bot_aliases:  <%= ENV['SLACK_RUBY_BOT_ALIASES']                  %>
+  giphy_api_key:           <%= ENV['GIPHY_API_KEY']                           %>
+  admin_ids:               <%= ENV['ADMIN_IDS']&.split(" ") || []             %>
+  bot_announce_channels:   <%= ENV['BOT_ANNOUNCE_CHANNELS']&.split(" ") || [] %>
+
+development:
+  <<: *default
+
+production:
+  <<: *default
