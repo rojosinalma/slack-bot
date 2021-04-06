@@ -82,7 +82,7 @@ Slack is currently composed of 3 core APIs that are available to all Slack Apps 
 
 1. **[Real Time Messages (RTM)](https://api.slack.com/rtm):**
 
-    This API is based on websockets and pushes different events that are related to texts/actions that occur inside Slack, i.e: when somebody is typing, a regular text message that triggers a command, somebody reacted with an emoji, etc. The bot opens a websocket with the provided token to Slack and as long as this websocket stays open, the bot will "listen" to all events, but will only act on those that are defined as commands.
+    This API is based on websockets and pushes different events that are related to texts/actions that occur inside Slack (like when somebody is typing, a regular text message that triggers a command, somebody reacted with an emoji, etc). The bot opens a websocket with the provided token to Slack and as long as this websocket stays open, the bot will "listen" to all events, but will only act on those that are defined as commands.
 
     Currently this is the main way to interact with the bot. When you text `bot hi`, the bot will "listen" to the text and if there's some command implemented to react, it will do something. i.e: it can send a text back, create a channel, PM someone, etc.
 
